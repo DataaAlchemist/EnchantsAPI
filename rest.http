@@ -1,0 +1,51 @@
+GET http://localhost:8000/api/book
+
+### create a product
+POST http://localhost:8000/api/book
+Content-Type: application/json
+
+{
+    "isbn" : "19088236",
+    "title" : "adrian23",
+    "author" : "adrian",
+    "genre" : "adventure",
+    "description" : "coming soon..."
+}
+
+### update a product
+PATCH http://localhost:8000/api/book/19088233
+Content-Type: application/json
+
+{
+    "author" : "adri2n"
+}
+
+### get a product by id
+GET http://localhost:8000/api/book/19088237
+
+### delete a product by id
+DELETE http://localhost:8000/api/book/19088236
+
+### error handling
+GET http://localhost:8000/api/user
+
+###
+GET http://localhost:8000/test/156789
+
+###
+POST http://localhost:8000/test
+Content-Type: application/json
+
+{
+    "name": "test",
+    "age": 20
+}
+
+###
+POST http://localhost:8000/test
+Content-Type: application/x-www-form-urlencoded
+
+name=test&age=20
+
+###
+POST http://localhost:8000/api/book/19088236

@@ -1,0 +1,28 @@
+{
+  "name": "enchants_api",
+  "version": "1.0.0",
+  "description": "application to read and loan book",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DataaAlchemist/api.git"
+  },
+  "keywords": [
+    "admin"
+  ],
+  "author": "adrian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DataaAlchemist/api/issues"
+  },
+  "homepage": "https://github.com/DataaAlchemist/api#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.2.2"
+  }
+}
