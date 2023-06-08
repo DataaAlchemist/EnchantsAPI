@@ -6,7 +6,7 @@ const Book = require('../Models/Book.model');
 module.exports = {
     getBooks: async (req, res, next) => {
         try {
-            const books = await Book.find({}, {_id:0, __v: 0}).populate('genre');
+            const books = await Book.find({}, {_id:0, __v: 0}).populate('genre').populate('author');
             res.send(books);
         } catch (error) {
             console.log(error.message);
@@ -31,7 +31,7 @@ module.exports = {
     findBookIsbn: async (req, res, next) => {
         const isbn = req.params.isbn;
         try{
-            const book = await Book.findOne({isbn:isbn}, {_id:0, __v: 0}).populate('genre');
+            const book = await Book.findOne({isbn:isbn}, {_id:0, __v: 0}).populate('genre').populate('author');
             if (!book){
                 throw createError(404, 'book does not exist');
             };

@@ -16,6 +16,9 @@ app.use('/api/book', Book);
 const Genre = require('./Routes/Genre.route');
 app.use('/api/genre', Genre);
 
+const Author = require('./Routes/Author.route');
+app.use('/api/author', Author);
+
 //If not found 404
 app.use((req, res, next) => {
     next(createError(404, "Not found"));
