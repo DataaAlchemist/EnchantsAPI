@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const createError = require('http-errors');
-const mongoose = require('mongoose')
 
-const Book = require('../Models/Book.model');
 const BookController = require('../Controllers/Book.Controller')
 
 //post a product
