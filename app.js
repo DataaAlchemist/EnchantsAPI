@@ -1,41 +1,12 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const createError = require('http-errors');
+const dotenv = require('dotenv').config()
 
 const app = express();
 
+require('./initDB')();
+
 app.use(express.json());
-
-mongoose.connect('mongodb+srv://enchant.brnukzz.mongodb.net/?retryWrites=true&w=majority', 
-{
-    dbName: 'enchant',
-    user: 'AdrianBadjideh',
-    pass: 'vQPm8EgUsKlIeeT2',
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => {
-    console.log("now i'm connecting to database...");
-})
-.catch(err => console.log(err.message));
-
-mongoose.connection.on('connected', () => {
-    console.log("Connecting to mongodb...");
-});
-
-mongoose.connection.on('error', (err) => {
-    console.log(err.message);
-});
-
-mongoose.connection.on('disconnected', () => {
-    console.log("Disconnecting...");
-});
-
-process.on('SIGINT', () => {
-    mongoose.connection.close(() => {
-        console.log("Disconnect from mongodb...");
-        process.exit(0)
-    })
-});
 
 app.all('/test', (req, res) => {
     console.log(req.body);
@@ -60,6 +31,8 @@ app.use((err, req, res, next) => {
     });
 })
 
-app.listen(8000, () => {
-    console.log("server start on port 8000...")
+const PORT = process.env.PORT || 8000
+
+app.listen(PORT, () => {
+    console.log(`server start on port ${PORT}...`)
 });
