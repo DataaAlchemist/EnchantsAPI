@@ -12,15 +12,15 @@ const BookSchema = new Schema({
     },
     author: {
         type: String,
-        require: true
+        required: true
     },
     genre: {
         type: String,
-        require: true,
+        required: true,
     },
     description: {
         type: String,
-        require: true
+        required: true
     },
 });
 

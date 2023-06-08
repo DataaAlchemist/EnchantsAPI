@@ -6,7 +6,7 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://enchant.brnukzz.mongodb.net/?retryWrites=true&w=majority/', 
+mongoose.connect('mongodb+srv://enchant.brnukzz.mongodb.net/?retryWrites=true&w=majority', 
 {
     dbName: 'enchant',
     user: 'AdrianBadjideh',
