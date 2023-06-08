@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
     isbn: {
@@ -15,14 +15,19 @@ const BookSchema = new Schema({
         required: true
     },
     genre: {
-        type: String,
-        required: true,
+        type: Schema.Types.ObjectId,
+        ref: 'genre'
     },
     description: {
         type: String,
         required: true
     },
+    image: {
+        type: String,
+        required: true
+    }
 });
 
-Book = mongoose.model('book', BookSchema);
+
+const Book = mongoose.model('Book', BookSchema);
 module.exports = Book;

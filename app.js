@@ -8,14 +8,15 @@ require('./initDB')();
 
 app.use(express.json());
 
-app.all('/test', (req, res) => {
-    console.log(req.body);
-    res.send(req.body);
-});
+//Book model handling
+const Book = require('./Routes/Book.route');
+app.use('/api/book', Book);
 
-const Book = require('./Routes/Book.route')
-app.use('/api/book', Book)
+//Genre model handling
+const Genre = require('./Routes/Genre.route');
+app.use('/api/genre', Genre);
 
+//If not found 404
 app.use((req, res, next) => {
     next(createError(404, "Not found"));
 });

@@ -1,3 +1,4 @@
+### Books
 GET http://localhost:8000/api/book
 
 ### create a product
@@ -8,8 +9,9 @@ Content-Type: application/json
     "isbn" : "19088237",
     "title" : "adrian2",
     "author" : "adrian",
-    "genre" : "adventure",
-    "description" : "coming soon..."
+    "genre" : "6481df119677bedf3b1719a7",
+    "description" : "coming soon...",
+    "image" : "https://images-eu.ssl-images-amazon.com/images/I/71g2ednj0JL._AC_UL300_SR300,200_.jpg"
 }
 
 ### update a product
@@ -24,28 +26,29 @@ Content-Type: application/json
 GET http://localhost:8000/api/book/19088234
 
 ### delete a product by id
-DELETE http://localhost:8000/api/book/19088238
+DELETE http://localhost:8000/api/book/19088237
 
-### error handling
-GET http://localhost:8000/api/user
 
-###
-GET http://localhost:8000/test/156789
+### Genres
 
-###
-POST http://localhost:8000/test
+### Get genres
+GET  http://localhost:8000/api/genre/
+
+### Delete genres
+DELETE  http://localhost:8000/api/genre/6481e2c357870d93c31830d9
+Content-Type: application/json
+    
+{
+    "genre": "Adrian2"
+}
+
+
+### post genres
+POST http://localhost:8000/api/genre
 Content-Type: application/json
 
 {
-    "name": "test",
-    "age": 20
+  "genre": "Goblok"
 }
 
-###
-POST http://localhost:8000/test
-Content-Type: application/x-www-form-urlencoded
 
-name=test&age=20
-
-###
-POST http://localhost:8000/api/book/19088236
