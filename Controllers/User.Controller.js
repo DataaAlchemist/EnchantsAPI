@@ -6,7 +6,7 @@ const User = require('../Models/User.model');
 module.exports = {
     getUsers: async (req, res, next) => {
         try {
-            const users = await User.find({}, {__v: 0});
+            const users = await User.find({}, {_id:0, __v: 0});
             res.send(users);
         } catch (error) {
             console.log(error.message);

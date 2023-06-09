@@ -63,3 +63,31 @@ Content-Type: application/json
 
 ### Author Books
 GET http://localhost:8000/api/author/books?Author=Adrian
+
+## USERS
+
+### get user
+GET http://localhost:8000/api/user
+
+### create user
+POST http://localhost:8000/api/user
+Content-Type: application/json
+
+{
+    "userid": "1",
+    "name" : "Adrian",
+    "email" : "adrianbadjideh@gmail.com",
+    "password": "adrian"
+}
+
+### update user
+PATCH http://localhost:8000/api/user/1
+Content-Type: application/json
+
+{
+    "name" : "Adrian2"
+}
+
+### delete user
+DELETE http://localhost:8000/api/user/1
+Content-Type: application/json
