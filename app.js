@@ -26,6 +26,10 @@ app.use('/api/author', Author);
 const User = require('./Routes/User.route');
 app.use('/api/user', User);
 
+//Loan model handling
+const Loan = require('./Routes/Loan.route');
+app.use('/api/loan', Loan);
+
 //If not found 404
 app.use((req, res, next) => {
   next(createError(404, 'Not found'));

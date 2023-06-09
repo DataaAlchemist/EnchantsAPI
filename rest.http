@@ -91,3 +91,19 @@ Content-Type: application/json
 ### delete user
 DELETE http://localhost:8000/api/user/1
 Content-Type: application/json
+
+
+### get loan
+GET http://localhost:8000/api/loan
+
+### create loan
+POST http://localhost:8000/api/loan
+Content-Type: application/json
+
+{
+    "userid": "648212f1f41b975c98e3c452",
+    "isbn" : "648212f1f41b975c98e3c452"
+}
+
+### delete loan
+DELETE http://localhost:8000/api/loan/648388d05607a19e533eeaea

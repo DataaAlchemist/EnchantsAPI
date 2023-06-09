@@ -8,7 +8,7 @@ const Book = require('../Models/Book.model');
 module.exports = {
     getLoans: async (req, res, next) => {
         try {
-            const loans = await Loan.find({}, {__v: 0}).populate('user').populate('book');
+            const loans = await Loan.find({}, {__v: 0}).populate('userid').populate('isbn');
             res.send(loans);
         } catch (error) {
             console.log(error.message);
@@ -40,6 +40,7 @@ module.exports = {
             if (!result){
                 throw createError(404, 'loan does not exist')
             };
+            res.send(result);
         } catch (error) {
             console.log(error.message);
             if(error instanceof mongoose.CastError) {

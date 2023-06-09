@@ -4,12 +4,10 @@ const Schema = mongoose.Schema;
 const LoanSchema = new Schema({
     userid: {
         type: Schema.Types.ObjectId,
-        ref: 'user',
         required: true
     },
-    bookid: {
+    isbn: {
         type: Schema.Types.ObjectId,
-        ref: 'book',
         required: true
     },
 }, 

@@ -1,6 +1,9 @@
 createError = require('http-errors');
 mongoose = require('mongoose');
 
+const Author = require('../Models/Author.model');
+const Book = require('../Models/Book.model');
+
 module.exports = {
     getAuthors: async (req, res, next) => {
         try {
@@ -23,7 +26,7 @@ module.exports = {
         
             const books = await Book.find({ author: author._id }).populate('genre').populate('author'); 
         
-            res.json(books);
+            res.send(books);
         } catch (error) {
             console.log(error.message);
             next(error);
