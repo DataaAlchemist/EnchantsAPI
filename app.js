@@ -16,8 +16,13 @@ app.use('/api/book', Book);
 const Genre = require('./Routes/Genre.route');
 app.use('/api/genre', Genre);
 
+//Author model handling
 const Author = require('./Routes/Author.route');
 app.use('/api/author', Author);
+
+//User model handling
+const User = require('./Routes/User.route');
+app.use('/api/user', User);
 
 //If not found 404
 app.use((req, res, next) => {
