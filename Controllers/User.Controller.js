@@ -45,7 +45,7 @@ module.exports = {
             next(error);
         }
     },
-
+ 
     updateUsers: async (req, res, next) => {
         try{
             const userid = req.params.userid;

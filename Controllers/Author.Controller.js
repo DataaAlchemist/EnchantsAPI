@@ -1,9 +1,6 @@
 createError = require('http-errors');
 mongoose = require('mongoose');
 
-Author = require('../Models/Author.model');
-Book = require('../Models/Book.model');
-
 module.exports = {
     getAuthors: async (req, res, next) => {
         try {

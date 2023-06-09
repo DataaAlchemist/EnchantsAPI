@@ -2,15 +2,13 @@ const express = require('express');
 const createError = require('http-errors');
 const dotenv = require('dotenv').config();
 
-const app = express();
 
 require('./initDB')();
 
-app.use(express.json());
 
-app.get('/', (req, res, next) => {
-  res.send('Hello World');
-});
+const app = express();
+
+app.use(express.json());
 
 //Book model handling
 const Book = require('./Routes/Book.route');
@@ -44,7 +42,8 @@ app.use((err, req, res, next) => {
   });
 });
 
-const PORT = process.env.PORT || 8080;
+
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
   console.log(`server start on port ${PORT}...`);
