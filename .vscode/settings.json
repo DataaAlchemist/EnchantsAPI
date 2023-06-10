@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/041df39a-64f2-4eeb-a7c5-03e36c714093/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/enchants",
+    "appService.deploySubpath": "."
+}
