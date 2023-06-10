@@ -2,9 +2,7 @@ const express = require('express');
 const createError = require('http-errors');
 const dotenv = require('dotenv').config();
 
-
 require('./initDB')();
-
 
 const app = express();
 
@@ -46,7 +44,7 @@ app.use((err, req, res, next) => {
   });
 });
 
-
+// run server
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {

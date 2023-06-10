@@ -76,8 +76,8 @@ Content-Type: application/json
 {
     "userid": "1",
     "name" : "Adrian",
-    "email" : "adrianbadjideh@gmail.com",
-    "password": "adrian"
+    "email" : "adrianbadjideh01@gmail.com",
+    "password": "adrian1"
 }
 
 ### update user
