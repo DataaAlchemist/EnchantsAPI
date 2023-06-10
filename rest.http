@@ -76,8 +76,8 @@ Content-Type: application/json
 {
     "userid": "1",
     "name" : "Adrian",
-    "email" : "adrianbadjideh01@gmail.com",
-    "password": "adrian1"
+    "email" : "adrianbadjideh@gmail.com",
+    "password": "GLAZERadr"
 }
 
 ### update user
@@ -85,7 +85,7 @@ PATCH http://localhost:8000/api/user/1
 Content-Type: application/json
 
 {
-    "name" : "Adrian2"
+    "name" : "Adrian Badjideh"
 }
 
 ### delete user
