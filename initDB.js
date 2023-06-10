@@ -6,12 +6,12 @@ module.exports = () => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(() => {
-        console.log("now i'm connecting to database...");
+        console.log("connected to database...");
     })
     .catch(err => console.log(err.message));
 
     mongoose.connection.on('connected', () => {
-        console.log("Connecting to mongodb...");
+        console.log("Connected to mongodb...");
     });
 
     mongoose.connection.on('error', (err) => {
