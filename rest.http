@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### get a product by id
-GET http://localhost:8000/api/book/19088234
+GET http://localhost:8000/api/book/19088236
 
 ### delete a product by id
 DELETE http://localhost:8000/api/book/19088237
@@ -75,9 +75,18 @@ Content-Type: application/json
 
 {
     "userid": "1",
-    "name" : "Adrian",
-    "email" : "adrianbadjideh@gmail.com",
-    "password": "GLAZERadr"
+    "name" : "Ariq Heritsa",
+    "email" : "ariqhm@gmail.com",
+    "password": "edanparah"
+}
+
+### login
+POST http://localhost:8000/api/user/login
+Content-Type: application/json
+
+{
+    "email" : "ariqhm@gmail.com",
+    "password": "edanparah"
 }
 
 ### update user

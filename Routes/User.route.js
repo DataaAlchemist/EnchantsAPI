@@ -6,6 +6,9 @@ const UserController = require('../Controllers/User.Controller')
 //post a product
 router.post('/', UserController.postUsers);
 
+// login
+router.post('/login', UserController.login);
+
 //get a product
 router.get('/', UserController.getUsers);
 

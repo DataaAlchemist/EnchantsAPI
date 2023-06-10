@@ -14,6 +14,27 @@ module.exports = {
         }
     },
 
+    login: async (req, res, next) => {
+        try {
+            const { email, password } = req.body;
+
+            const user = await User.find({
+                email: email,
+                password: password
+            });
+
+            if (user.length === 0) {
+                res.status(401).send('These credentials do not match our records.')
+                return
+            }
+
+            res.send(user[0]);
+        } catch (error) {
+            console.log(error.message);
+            next(error);
+        }
+    },
+
     postUsers: async (req, res, next) => {
         const { email } = req.body;
         try {
