@@ -1,5 +1,5 @@
 ### Books
-GET http://localhost:8000/api/book
+GET http://api-enchants.vercel.app/api/book
 
 ### create a product
 POST http://localhost:8000/api/book
@@ -11,11 +11,12 @@ Content-Type: application/json
     "author" : "648215beb7417ea31cb4c4be",
     "genre" : "6481df119677bedf3b1719a7",
     "description" : "coming soon...",
-    "image" : "https://images-eu.ssl-images-amazon.com/images/I/71g2ednj0JL._AC_UL300_SR300,200_.jpg"
+    "image" : "https://images-eu.ssl-images-amazon.com/images/I/71g2ednj0JL._AC_UL300_SR300,200_.jpg",
+    "rating" : 1
 }
 
 ### update a product
-PATCH http://localhost:8000/api/book/19088233
+PATCH http://localhost:8000/api/book/
 Content-Type: application/json
 
 {
@@ -23,10 +24,10 @@ Content-Type: application/json
 }
 
 ### get a product by id
-GET http://localhost:8000/api/book/19088236
+GET http://localhost:8000/api/book/111
 
 ### delete a product by id
-DELETE http://localhost:8000/api/book/19088237
+DELETE http://localhost:8000/api/book/19088235
 
 
 ### Genres
@@ -35,12 +36,15 @@ DELETE http://localhost:8000/api/book/19088237
 GET  http://localhost:8000/api/genre/
 
 ### Delete genres
-DELETE  http://localhost:8000/api/genre/6481e2c357870d93c31830d9
+DELETE  http://localhost:8000/api/genre/6481df119677bedf3b1719a7
 Content-Type: application/json
     
 {
     "genre": "Adrian2"
 }
+
+### get genres
+GET http://localhost:8000/api/genre/6481df119677bedf3b1719a7
 
 
 ### post genres
@@ -74,31 +78,30 @@ POST http://localhost:8000/api/user
 Content-Type: application/json
 
 {
-    "userid": "1",
-    "name" : "Ariq Heritsa",
-    "email" : "ariqhm@gmail.com",
-    "password": "edanparah"
+    "name" : "Ariq Heritsam",
+    "email" : "ariqini@gmail.com",
+    "password": "yaasaham"
 }
 
 ### login
-POST http://localhost:8000/api/user/login
+POST http://api-enchants.vercel.app/api/user/login
 Content-Type: application/json
 
 {
-    "email" : "ariqhm@gmail.com",
-    "password": "edanparah"
+    "email" : "ariqini@gmail.com",
+    "password": "yaasaham"
 }
 
 ### update user
-PATCH http://localhost:8000/api/user/1
+PATCH http://localhost:8000/api/user/6484c1a7611295db734db9ae
 Content-Type: application/json
 
 {
-    "name" : "Adrian Badjideh"
+    "name" : "Adrian Ini"
 }
 
 ### delete user
-DELETE http://localhost:8000/api/user/1
+DELETE http://localhost:8000/api/user/6484c1a7611295db734db9ae
 Content-Type: application/json
 
 

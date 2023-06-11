@@ -6,7 +6,7 @@ const User = require('../Models/User.model');
 module.exports = {
     getUsers: async (req, res, next) => {
         try {
-            const users = await User.find({}, {_id:0, __v: 0});
+            const users = await User.find({}, { __v: 0});
             res.send(users);
         } catch (error) {
             console.log(error.message);
@@ -58,9 +58,9 @@ module.exports = {
       },      
 
     findUserId: async (req, res, next) => {
-        const userid = req.params.userid;
+        const id = req.params.id;
         try {
-            const result = await User.findOne({userid:userid}, {_id:0, __v:0})
+            const result = await User.findOne({id:id}, {___v:0})
             if (!result){
                 throw createError(404, 'user does not exist');
             };
@@ -77,11 +77,11 @@ module.exports = {
  
     updateUsers: async (req, res, next) => {
         try{
-            const userid = req.params.userid;
+            const id = req.params.id;
             const updates = req.body;
             const options = {new:true};
 
-            const result = await User.findOneAndUpdate({userid:userid}, updates, options);
+            const result = await User.findOneAndUpdate({id:id}, updates, options);
             if (!result){
                 throw createError(404, 'user does not exist')
             };
@@ -97,9 +97,9 @@ module.exports = {
     },
 
     deleteUsers: async (req, res, next) => {
-        const userid = req.params.userid;
+        const id = req.params.id;
         try {
-            const result = await User.findOneAndDelete({userid:userid});
+            const result = await User.findOneAndDelete({id:id});
             if (!result){
                 throw createError(404, 'user does not exist')
             }
