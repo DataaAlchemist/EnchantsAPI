@@ -6,7 +6,7 @@ module.exports = () => {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(() => {
-        console.log("connecting me to database...");
+        console.log("connecting...");
     })
     .catch(err => console.log(err.message));
 
