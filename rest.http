@@ -8,8 +8,8 @@ Content-Type: application/json
 {
     "isbn" : "19088235",
     "title" : "Nadya Mystery",
-    "author" : "648215beb7417ea31cb4c4be",
-    "genre" : "6481df119677bedf3b1719a7",
+    "author" : "6485537fab8e785ec070821d",
+    "genre" : "6485535fab8e785ec070820f",
     "description" : "coming soon...",
     "image" : "https://images-eu.ssl-images-amazon.com/images/I/71g2ednj0JL._AC_UL300_SR300,200_.jpg",
     "rating" : 1
@@ -20,7 +20,7 @@ PATCH http://localhost:8000/api/book/
 Content-Type: application/json
 
 {
-    "author" : "adrian2"
+    "author" : "19088235"
 }
 
 ### get a product by id
@@ -52,7 +52,7 @@ POST http://localhost:8000/api/genre
 Content-Type: application/json
 
 {
-  "genre": "Goblok"
+  "genre": "saham ini"
 }
 
 
@@ -71,7 +71,7 @@ GET http://localhost:8000/api/author/books?Author=Adrian
 ## USERS
 
 ### get user
-GET http://localhost:8000/api/user
+GET http://api-enchants.vercel.app/api/user
 
 ### create user
 POST http://localhost:8000/api/user
